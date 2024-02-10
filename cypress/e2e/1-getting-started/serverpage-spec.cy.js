@@ -1,7 +1,7 @@
 describe('Server Page Navigation Tests', () => {
   beforeEach(() => {
     // Visit the base URL before each test
-    cy.visit('/');
+    cy.visit('/server');
   });
 
   it('should navigate to Server page when clicking on the Server link in the header', () => {
