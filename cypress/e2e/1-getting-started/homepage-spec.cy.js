@@ -4,7 +4,7 @@ describe('Hello World Test', () => {
       .its('status')
       .should('equal', 200);
 
-    cy.request('/')
+    cy.request('/home')
       .its('body')
       .should('include', 'Welcome to Scamazon!');
   });

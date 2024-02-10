@@ -1,7 +1,7 @@
 describe('Login Page Navigation Tests', () => {
   beforeEach(() => {
     // Visit the base URL before each test
-    cy.visit('/');
+    cy.visit('/home');
   });
 
   it('should navigate to Login page when clicking on the Login link in the header', () => {

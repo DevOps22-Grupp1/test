@@ -1,7 +1,7 @@
 describe('About Page Navigation Tests', () => {
   beforeEach(() => {
     // Visit the base URL before each test
-    cy.visit('/');
+    cy.visit('/home');
   });
 
   it('should navigate to About page when clicking on the About link in the header', () => {
@@ -16,5 +16,5 @@ describe('About Page Navigation Tests', () => {
     cy.get('h1').should('contain', 'About');
   });
 
-  
+
 });
