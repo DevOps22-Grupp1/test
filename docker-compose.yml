@@ -1,5 +1,4 @@
-version: "3.3"
-name: "scamazon"
+version: "3"
 services:
   mongo-order-processing-service:
     image: mongo
