@@ -8,5 +8,11 @@ jobs:
       - uses: actions/checkout@v2
       - name: Build the stack
         run: docker-compose up  -d
-      - name: test 1234
-        run: docker ps
+      
+      - name: Run Cypress tests
+        uses: cypress-io/github-action@v6
+        with:
+          browser: chrome
+
+      - name: Stop Docker Compose
+        run: docker compose -f docker-compose.yml down
