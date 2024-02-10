@@ -1,4 +1,5 @@
-version: "3"
+version: "3.4"
+name: "scamazon"
 services:
   mongo-order-processing-service:
     image: mongo
@@ -102,22 +103,21 @@ services:
       - DB_PASSWORD=example
       - DB_HOST=mongo-user-management-service
       - DB_PORT=27017
-  
-  
-  # home-page-service:
-  #   image: passwordnotsafe/home-page-service
-  #   networks:
-  #     - my_network
-  #   ports:
-  #     - "4004:4004"
-  #   environment:
-  #     - SERVER_PORT=4004
-  #     - PRODUCT_URL=scamazon-product-catalog-service-1
-  #     - PRODUCT_PORT=4005
-  #     - USER_URL=scamazon-user-management-service-1
-  #     - USER_PORT=4006
-  #     - ORDER_URL=scamazon-order-processing-service-1
-  #     - ORDER_PORT=4007
+    
+  home-page-service:
+    image: passwordnotsafe/home-page-service
+    networks:
+      - my_network
+    ports:
+      - "4004:4004"
+    environment:
+      - SERVER_PORT=4004
+      - PRODUCT_URL=scamazon-product-catalog-service-1
+      - PRODUCT_PORT=4005
+      - USER_URL=scamazon-user-management-service-1
+      - USER_PORT=4006
+      - ORDER_URL=scamazon-order-processing-service-1
+      - ORDER_PORT=4007
 
   
 

@@ -366,7 +366,8 @@ db.products.insertMany([
         "id": 51,
         "order": "Apple iPhone 13 Pro 128GB",
         "price": 999.99,
-        "image": "https://www.elgiganten.se/image/dv_web_D1800010021421037/300156/apple-iphone-13-pro-128gb-2023--pdp_zoom-3000--pdp_main-960.jpg", "category": ["mobile"]
+        "image": "https://www.elgiganten.se/image/dv_web_D1800010021421037/300156/apple-iphone-13-pro-128gb-2023--pdp_zoom-3000--pdp_main-960.jpg",
+        "category": ["mobile"]
     },
     {
         "id": 52,
