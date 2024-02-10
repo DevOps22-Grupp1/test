@@ -7,6 +7,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build the stack
-        run: docker-compose  up  -d
-      - name: Check the docker ps
-        run: docker ps
+        run: docker-compose up  -d

@@ -58,21 +58,21 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: example
       MONGO_INITDB_DATABASE: allProducts
 
-
-  # mongo-express-order-processing-service:
-  #   image: mongo-express
-  #   restart: always
-  #   ports:
-  #     - 8084:8081
-  #   networks:
-  #     - my_network
-  #   depends_on:
-  #     mongo-order-processing-service:
-  #       condition: service_healthy
-  #   environment:
-  #     ME_CONFIG_MONGODB_ADMINUSERNAME: root
-  #     ME_CONFIG_MONGODB_ADMINPASSWORD: example
-  #     ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo-order-processing-service:27017/
+  order-processing-service:
+    image: passwordnotsafe/order-processing-service
+    ports:
+      - 4007:4007
+    networks:
+      - my_network
+    depends_on:
+      mongo-order-processing-service:
+        condition: service_healthy
+    environment:
+      - SERVER_PORT=4007
+      - DB_HOST=mongo-order-processing-service
+      - DB_PORT=27017
+      - DB_USERNAME=root
+      - DB_PASSWORD=example
 
   # home-page-service:
   #   image: passwordnotsafe/home-page-service
