@@ -58,21 +58,21 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: example
       MONGO_INITDB_DATABASE: allProducts
 
-  # order-processing-service:
-  #   image: passwordnotsafe/order-processing-service
-  #   ports:
-  #     - 4007:4007
-  #   networks:
-  #     - my_network
-  #   depends_on:
-  #     mongo-order-processing-service:
-  #       condition: service_healthy
-  #   environment:
-  #     - SERVER_PORT=4007
-  #     - DB_HOST=mongo-order-processing-service
-  #     - DB_PORT=27017
-  #     - DB_USERNAME=root
-  #     - DB_PASSWORD=example
+  order-processing-service:
+    image: passwordnotsafe/order-processing-service
+    ports:
+      - 4007:4007
+    networks:
+      - my_network
+    # depends_on:
+    #   mongo-order-processing-service:
+    #     condition: service_healthy
+    environment:
+      - SERVER_PORT=4007
+      - DB_HOST=mongo-order-processing-service
+      - DB_PORT=27017
+      - DB_USERNAME=root
+      - DB_PASSWORD=example
 
   # home-page-service:
   #   image: passwordnotsafe/home-page-service
