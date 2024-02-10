@@ -6,7 +6,7 @@ services:
     networks:
       - my_network
     volumes:
-      - ./init/user/init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+      - ./init/order/init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
     #   - ./data-order-processing-service:/data/db
     healthcheck:
       test: echo 'mongo-order-processing-service.runCommand("ping").ok' | mongosh mongo-order-processing-service:27017 --quiet
