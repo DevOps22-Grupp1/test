@@ -1,6 +1,6 @@
 name: docker-compose-actions-workflow
 
-on:s workflow_dispatch:
+on: workflow_dispatch:
 
 jobs:
   test:
