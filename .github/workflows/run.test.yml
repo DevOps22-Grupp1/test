@@ -1,10 +1,6 @@
 name: docker-compose-actions-workflow
 
-on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
+on:s workflow_dispatch:
 
 jobs:
   test:
