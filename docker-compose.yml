@@ -59,7 +59,7 @@ services:
       MONGO_INITDB_DATABASE: allProducts
 
   order-processing-service:
-    image: passwordnotsafe/order-processing-service
+    image: passwordnotsafe/test-cypress:order-processing-service
     ports:
       - 4007:4007
     networks:
@@ -75,7 +75,7 @@ services:
       - DB_PASSWORD=example
       
   product-catalog-service:
-    image: passwordnotsafe/produkt-catalog-service
+    image: passwordnotsafe/test-cypress:produkt-catalog-service
     networks:
       - my_network
     ports:
@@ -88,7 +88,7 @@ services:
       - SERVER_PORT=4005
       
   user-management-service:
-    image: passwordnotsafe/user-management-service
+    image: passwordnotsafe/test-cypress:user-management-service
     ports:
       - 4006:4006
     networks:
@@ -104,7 +104,7 @@ services:
       - DB_PORT=27017
     
   home-page-service:
-    image: passwordnotsafe/home-page-service
+    image: passwordnotsafe/test-cypress:home-page-service
     networks:
       - my_network
     ports:
